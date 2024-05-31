@@ -10,8 +10,7 @@ Bienvenue sur la page dédiée aux sujets de colles et leurs corrections.
 
 ## Liste des Colles
 
-{% for post in site.posts %}
-  {% if post.categories contains "colles" %}
-    - [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%d %B %Y" }}
-  {% endif %}
+{% assign pdfs = site.static_files | where: "path", "/sdc/" %}
+{% for pdf in pdfs %}
+  - [{{ pdf.basename | capitalize }}]({{ pdf.path }})
 {% endfor %}
