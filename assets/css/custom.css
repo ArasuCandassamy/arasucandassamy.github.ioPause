@@ -1,31 +1,44 @@
-/* Styles pour les boutons "Énoncé" */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid-item h3 {
+  margin-top: 0;
+  text-align: justify;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 .btn-enonce {
-    background-color: #007bff; /* Couleur de fond */
-    color: white; /* Couleur du texte */
-    border: 2px solid #007bff; /* Bordure */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
-    font-size: 16px; /* Taille de police */
-    text-decoration: none; /* Pas de soulignement */
-    display: inline-block; /* Afficher en ligne */
-    margin-right: 10px; /* Marge à droite */
-  }
-  
-  /* Styles pour les boutons "Éléments de Correction" */
-  .btn-correction {
-    background-color: #28a745; /* Couleur de fond */
-    color: white; /* Couleur du texte */
-    border: 2px solid #28a745; /* Bordure */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
-    font-size: 16px; /* Taille de police */
-    text-decoration: none; /* Pas de soulignement */
-    display: inline-block; /* Afficher en ligne */
-  }
-  
-  /* Hover effect */
-  .btn-enonce:hover,
-  .btn-correction:hover {
-    opacity: 0.8; /* Réduire l'opacité au survol */
-  }
-  
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #007bff;
+}
+
+.btn-enonce:hover {
+  background-color: #0056b3;
+}
